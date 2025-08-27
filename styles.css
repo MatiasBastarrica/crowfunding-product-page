@@ -1,0 +1,10 @@
+/* ### CUSTOM PROPERTIES ### */
+
+:root {
+  /* # PRIMARY # */
+  --green-400: hsl(176, 50%, 47%);
+  --green-700: hsl(176, 72%, 28%);
+  /* # NEUTRAL # */
+  --black: hsl(0, 0%, 0%);
+  --gray-500: hsl(0, 0%, 48%);
+}
