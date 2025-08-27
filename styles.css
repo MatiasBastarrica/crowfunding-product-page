@@ -7,4 +7,9 @@
   /* # NEUTRAL # */
   --black: hsl(0, 0%, 0%);
   --gray-500: hsl(0, 0%, 48%);
+  /* # TYPOGRAPHY # */
+  --ff-commissioner: "Commissioner", sans-serif;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-700: 700;
 }
