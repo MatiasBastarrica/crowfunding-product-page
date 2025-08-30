@@ -43,3 +43,29 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* ### CROWFUNDING PRODUCT ### */
+
+header {
+  background-image: url(./images/image-hero-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 300px;
+}
+
+.header-container {
+  padding-top: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin-inline: auto;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.desktop-nav {
+  display: none;
+}
