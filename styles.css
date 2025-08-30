@@ -44,7 +44,15 @@ a {
   color: inherit;
 }
 
+/* ### UTILITY CLASSES ### */
+
+.container {
+  width: 85%;
+  margin-inline: auto;
+}
+
 /* ### CROWFUNDING PRODUCT ### */
+/* # HEADER # */
 
 header {
   background-image: url(./images/image-hero-mobile.jpg);
@@ -58,8 +66,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 85%;
-  margin-inline: auto;
 }
 
 .mobile-menu {
@@ -69,3 +75,5 @@ header {
 .desktop-nav {
   display: none;
 }
+
+/* # MAIN # */
