@@ -44,11 +44,22 @@ a {
   color: inherit;
 }
 
+ul {
+  list-style: none;
+}
+
 /* ### UTILITY CLASSES ### */
 
 .container {
   width: 85%;
   margin-inline: auto;
+}
+
+/* ### GENERAL STYLING ### */
+
+body {
+  font-family: var(--ff-commissioner);
+  font-weight: var(--fw-400);
 }
 
 /* ### CROWFUNDING PRODUCT ### */
