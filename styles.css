@@ -51,6 +51,7 @@ ul {
 button {
   background-color: unset;
   border: none;
+  cursor: pointer;
 }
 
 /* ### UTILITY CLASSES ### */
@@ -84,6 +85,7 @@ h2,
 h3 {
   color: var(--black);
   font-size: 1.3rem;
+  font-weight: var(--fw-700);
 }
 
 p {
@@ -142,7 +144,7 @@ main {
   position: relative;
   text-align: center;
   display: grid;
-  gap: 1rem;
+  gap: 1.325rem;
 }
 
 .crowfunding__intro .mastercraft-logo-container {
@@ -157,5 +159,26 @@ main {
 }
 
 .intro-btns-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+}
+
+.back-project-btn {
+  color: #fff;
+  background-color: var(--green-400);
+  padding: 1rem 2rem;
+  font-weight: var(--fw-500);
+  font-size: 1.025rem;
+  border-radius: 200px;
+}
+
+.bookmark-btn {
+  background-color: #000;
+  width: 50px;
+  height: 50px;
+  border-radius: 200px;
+  background-image: url(./images/icon-bookmark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
