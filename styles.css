@@ -48,6 +48,11 @@ ul {
   list-style: none;
 }
 
+button {
+  background-color: unset;
+  border: none;
+}
+
 /* ### UTILITY CLASSES ### */
 
 .container {
