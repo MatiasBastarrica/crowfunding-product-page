@@ -60,6 +60,19 @@ ul {
 body {
   font-family: var(--ff-commissioner);
   font-weight: var(--fw-400);
+  color: var(--gray-500);
+  font-size: 0.875rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--black);
+  font-size: 1.3rem;
+}
+
+p {
+  line-height: 1.5;
 }
 
 /* ### CROWFUNDING PRODUCT ### */
@@ -88,3 +101,46 @@ header {
 }
 
 /* # MAIN # */
+
+main {
+  background-color: #fafafa;
+}
+
+.crowfunding-section {
+  display: grid;
+  gap: 1.5rem;
+  position: relative;
+  top: -56px;
+}
+
+.crowfunding__intro,
+.crowfunding__stats,
+.crowfunding__about {
+  background-color: #fff;
+  box-shadow: 0px 4px 30px #dcdcdc87;
+  border-radius: 0.4rem;
+  padding: 2rem 1.5rem;
+}
+
+.crowfunding__intro {
+  padding-top: 2.8rem;
+  position: relative;
+  text-align: center;
+  display: grid;
+  gap: 1rem;
+}
+
+.crowfunding__intro .mastercraft-logo-container {
+  position: absolute;
+  top: calc(56px / -2);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.crowfunding__intro h1 {
+  margin-top: 0.5rem;
+}
+
+.intro-btns-container {
+  display: flex;
+}
