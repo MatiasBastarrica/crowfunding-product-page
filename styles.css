@@ -237,3 +237,82 @@ main {
   width: 89%;
   border-radius: 200px;
 }
+
+/* ### ABOUT SECTION ### */
+
+.crowfunding__about {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.about__intro h2 {
+  font-size: 1.1rem;
+}
+
+.about__intro,
+.about__rewards-container {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.reward {
+  border: 1px solid #dbdbdb;
+  border-radius: 0.4rem;
+  padding: 1.5rem 1.3rem;
+  display: grid;
+  gap: 1.2rem;
+  position: relative;
+}
+
+.reward__header > * {
+  font-size: 0.9rem;
+}
+
+.reward-subtitle {
+  margin-top: 0.4rem;
+  font-weight: var(--fw-500);
+  color: var(--green-400);
+}
+
+.reward__footer {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.days-left {
+  display: flex;
+  align-items: center;
+  font-weight: var(--fw-500);
+}
+
+.reward-number-left {
+  margin-right: 0.4rem;
+  font-size: 1.8rem;
+  color: var(--black);
+  font-weight: var(--fw-700);
+}
+
+.select-reward-btn {
+  background-color: var(--green-400);
+  color: #fff;
+  padding: 1rem 2.2rem;
+  justify-self: start;
+  border-radius: 200px;
+  font-weight: var(--fw-500);
+}
+
+/* .reward.disabled::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(128, 128, 128, 0.622);
+} */
+
+.reward.disabled {
+  filter: opacity(50%);
+}
+
+.select-reward-btn.disabled {
+  background-color: #cbcbcb;
+}
