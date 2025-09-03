@@ -117,7 +117,7 @@ header {
   display: none;
 }
 
-/* # MAIN # */
+/* ### MAIN ### */
 
 main {
   background-color: #fafafa;
@@ -138,6 +138,8 @@ main {
   border-radius: 0.4rem;
   padding: 2rem 1.5rem;
 }
+
+/* ## INTRO SECTION ## */
 
 .crowfunding__intro {
   padding-top: 2.8rem;
@@ -181,4 +183,57 @@ main {
   background-image: url(./images/icon-bookmark.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+/* ## STATS SECTION ## */
+
+.crowfunding__stats ul {
+  display: grid;
+  gap: 1rem;
+}
+
+.crowfunding__stats li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  position: relative;
+}
+
+.crowfunding__stats li + li {
+  padding-top: 1.3rem;
+}
+
+.crowfunding__stats li:nth-child(2):before,
+.crowfunding__stats li:nth-child(3):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  display: block;
+  border-top: 1px solid #d8d8d8;
+  width: 70px;
+  height: 1px;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: var(--fw-700);
+  color: var(--black);
+}
+
+.progress-bar {
+  margin-top: 2rem;
+  border-radius: 200px;
+  height: 12px;
+  background-color: #f4f4f4;
+  overflow: hidden;
+}
+
+.progress-bar::after {
+  content: "";
+  display: block;
+  background-color: var(--green-400);
+  height: 12px;
+  width: 89%;
+  border-radius: 200px;
 }
