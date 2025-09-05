@@ -82,6 +82,10 @@ input[type="number"] {
   width: 1px;
 }
 
+.hide {
+  display: none;
+}
+
 /* ### GENERAL STYLING ### */
 
 body {
@@ -391,14 +395,26 @@ main {
   color: var(--green-400);
 }
 
-.pledge-dropdown {
+.selection-modal .days-left-container {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.selection-modal .days {
+  font-size: 1.325rem;
+  font-weight: var(--fw-700);
+  color: var(--black);
+}
+
+.pledge-dropdown .wrapper {
   padding-top: 1.5rem;
   position: relative;
   display: grid;
   gap: 1rem;
 }
 
-.pledge-dropdown::before {
+.pledge-dropdown .wrapper::before {
   content: "";
   display: block;
   position: absolute;
