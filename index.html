@@ -162,15 +162,30 @@
           </div>
         </div>
       </section>
-      <dialog class="selection-modal">
-        <h2>Back this project</h2>
-        <p>
-          Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
-          the world?
-        </p>
+      <dialog class="selection-modal" open>
+        <div class="selection-modal__header">
+          <h2>Back this project</h2>
+          <p>
+            Want to support us in bringing Mastercraft Bamboo Monitor Riser out
+            in the world?
+          </p>
+        </div>
         <article class="modal-reward">
-          <div class="input-container"></div>
-          <div class="title-container"><h3>Pledge with no reward</h3></div>
+          <div class="modal-reward__header">
+            <div class="input-container">
+              <input
+                type="radio"
+                name="reward"
+                id="no-reward"
+                value="no-reward"
+              />
+            </div>
+            <div class="title-container">
+              <label for="no-reward">
+                <h3>Pledge with no reward</h3>
+              </label>
+            </div>
+          </div>
           <p class="text">
             Choose to support us without a reward if you simply believe in our
             projec. As a backer, you will be signed up to receive product
@@ -178,10 +193,21 @@
           </p>
         </article>
         <article class="modal-reward">
-          <div class="input-container"></div>
-          <div class="title-container">
-            <h3>Bamboo Stand</h3>
-            <p class="subtitle">Pledge $25 or more</p>
+          <div class="modal-reward__header">
+            <div class="input-container">
+              <input
+                type="radio"
+                name="reward"
+                id="bamboo-stand"
+                value="bamboo-stand"
+              />
+            </div>
+            <div class="title-container">
+              <label for="bamboo-stand">
+                <h3>Bamboo Stand</h3>
+              </label>
+              <p class="subtitle">Pledge $25 or more</p>
+            </div>
           </div>
           <p class="text">
             You get an ergonomic stand made of natural bamboo. You've helped us
@@ -193,17 +219,30 @@
           </div>
           <div class="pledge-dropdown">
             <h3>Enter your pledge</h3>
-            <div class="input-container">
-              <input type="number" name="pledge" id="pledge" value="25" />
+            <div class="pledge-dropdown__cta">
+              <div class="input-container">
+                <input type="number" name="pledge" id="pledge" value="25" />
+              </div>
+              <button type="button">Continue</button>
             </div>
-            <button type="button">Continue</button>
           </div>
         </article>
         <article class="modal-reward">
-          <div class="input-container"></div>
-          <div class="title-container">
-            <h3>Black Edition Stand</h3>
-            <p class="subtitle">Pledge $75 or more</p>
+          <div class="modal-reward__header">
+            <div class="input-container">
+              <input
+                type="radio"
+                name="reward"
+                id="black-edition-stand"
+                value="black-edition-stand"
+              />
+            </div>
+            <div class="title-container">
+              <label for="black-edition-stand">
+                <h3>Black Edition Stand</h3>
+              </label>
+              <p class="subtitle">Pledge $75 or more</p>
+            </div>
           </div>
           <p class="text">
             You get a Black Special Edition computer stand and a personal thank
@@ -215,17 +254,30 @@
           </div>
           <div class="pledge-dropdown">
             <h3>Enter your pledge</h3>
-            <div class="input-container">
-              <input type="number" name="pledge" id="pledge" value="75" />
+            <div class="pledge-dropdown__cta">
+              <div class="input-container">
+                <input type="number" name="pledge" id="pledge" value="75" />
+              </div>
+              <button type="button">Continue</button>
             </div>
-            <button type="button">Continue</button>
           </div>
         </article>
         <article class="modal-reward disabled">
-          <div class="input-container"></div>
-          <div class="title-container">
-            <h3>Mahogany Special Edition</h3>
-            <p class="subtitle">Pledge $200 or more</p>
+          <div class="modal-reward__header">
+            <div class="input-container">
+              <input
+                type="radio"
+                name="reward"
+                id="mahogany-special-edition"
+                value="mahogany-special-edition"
+              />
+            </div>
+            <div class="title-container">
+              <label for="mahogany-special-edition">
+                <h3>Mahogany Special Edition</h3>
+              </label>
+              <p class="subtitle">Pledge $200 or more</p>
+            </div>
           </div>
           <p class="text">
             You get two Special Edition Mahogany stands, a Backer T-Shirt, and a
@@ -237,10 +289,12 @@
           </div>
           <div class="pledge-dropdown">
             <h3>Enter your pledge</h3>
-            <div class="input-container">
-              <input type="number" name="pledge" id="pledge" value="200" />
+            <div class="pledge-dropdown__cta">
+              <div class="input-container">
+                <input type="number" name="pledge" id="pledge" value="200" />
+              </div>
+              <button type="button">Continue</button>
             </div>
-            <button type="button">Continue</button>
           </div>
         </article>
       </dialog>
