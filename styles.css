@@ -418,4 +418,39 @@ main {
 .pledge-dropdown__cta {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.pledge-dropdown__cta .input-container {
+  position: relative;
+}
+
+.pledge-dropdown__cta .input-container::after {
+  content: "$";
+  font-size: 0.975rem;
+  display: block;
+  position: absolute;
+  top: 50%;
+  color: #dbdbdb;
+  font-weight: var(--fw-700);
+  left: 1.6rem;
+  transform: translateY(-50%);
+}
+
+.pledge-dropdown__cta input {
+  width: 100%;
+  font-weight: var(--fw-700);
+  border-radius: 200px;
+  border: 1px solid #dbdbdb;
+  padding: 1rem 1.5rem 1rem 2.5rem;
+  font-size: 0.975rem;
+}
+
+.pledge-dropdown__cta button {
+  background-color: var(--green-400);
+  color: #fff;
+  font-weight: var(--fw-700);
+  border-radius: 200px;
+  font-size: 0.975rem;
 }
