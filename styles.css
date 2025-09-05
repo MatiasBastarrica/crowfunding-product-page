@@ -330,6 +330,11 @@ main {
   top: 8rem;
   width: 90%;
   margin-inline: auto;
+  border-radius: 0.8rem;
+  border: unset;
+}
+
+.selection-modal .wrapper {
   padding: 1.8rem 1.325rem;
   color: var(--gray-500);
   display: grid;
@@ -469,4 +474,40 @@ main {
   font-weight: var(--fw-700);
   border-radius: 200px;
   font-size: 0.975rem;
+}
+
+/* ### COMPLETED MODAL ### */
+
+.completed-modal {
+  top: 9rem;
+  width: 90%;
+  margin-inline: auto;
+  border-radius: 0.8rem;
+  border: unset;
+}
+
+.completed-modal .wrapper {
+  padding: 2rem 1.5rem;
+  display: grid;
+  justify-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.completed-modal h2 {
+  font-size: 1.125rem;
+  font-weight: var(--fw-700);
+}
+
+.completed-modal p {
+  color: var(--gray-500);
+  font-size: 0.84rem;
+}
+
+.completed-modal button {
+  background-color: var(--green-400);
+  color: #fff;
+  font-weight: var(--fw-700);
+  border-radius: 200px;
+  padding: 1rem 2rem;
 }
