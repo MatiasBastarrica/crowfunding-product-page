@@ -332,6 +332,8 @@ main {
   margin-inline: auto;
   border-radius: 0.8rem;
   border: unset;
+  position: absolute;
+  max-height: none;
 }
 
 .selection-modal::backdrop {
