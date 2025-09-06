@@ -236,7 +236,7 @@ main {
   color: var(--black);
 }
 
-.progress-bar {
+.progress-bar-container {
   margin-top: 2rem;
   border-radius: 200px;
   height: 12px;
@@ -244,9 +244,7 @@ main {
   overflow: hidden;
 }
 
-.progress-bar::after {
-  content: "";
-  display: block;
+.progress-bar__bar {
   background-color: var(--green-400);
   height: 12px;
   width: 89%;
