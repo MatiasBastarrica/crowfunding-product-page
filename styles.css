@@ -334,7 +334,11 @@ main {
   border: unset;
 }
 
-.selection-modal .wrapper {
+.selection-modal::backdrop {
+  background-color: #00000052;
+}
+
+.selection-modal > .wrapper {
   padding: 1.8rem 1.325rem;
   color: var(--gray-500);
   display: grid;
@@ -412,14 +416,14 @@ main {
   color: var(--black);
 }
 
-.pledge-dropdown .wrapper {
+.pledge-dropdown > .wrapper {
   padding-top: 1.5rem;
   position: relative;
   display: grid;
   gap: 1rem;
 }
 
-.pledge-dropdown .wrapper::before {
+.pledge-dropdown > .wrapper::before {
   content: "";
   display: block;
   position: absolute;
@@ -486,7 +490,7 @@ main {
   border: unset;
 }
 
-.completed-modal .wrapper {
+.completed-modal > .wrapper {
   padding: 2rem 1.5rem;
   display: grid;
   justify-items: center;
