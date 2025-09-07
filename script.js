@@ -1,3 +1,4 @@
+// ### VARIABLES ###
 const selectedModal = document.querySelector(".selection-modal");
 const backProjectBtn = document.querySelector(".back-project-btn");
 const completedModal = document.querySelector(".completed-modal");
@@ -5,9 +6,6 @@ const completedModalBtn = document.querySelector(".completed-modal button");
 const currentBudget = document.querySelector(".current-budget");
 const totalBackers = document.querySelector(".total-backers");
 const progressBar = document.querySelector(".progress-bar__bar");
-
-backProjectBtn.addEventListener("click", openSelectedModal);
-
 const noRewardPledge = document.querySelector(".no-reward-pledge");
 const bambooStandPledge = document.querySelector(".bamboo-stand-pledge");
 const blackEdStandPledge = document.querySelector(".black-ed-stand-pledge");
@@ -33,6 +31,10 @@ const modalObj = {
     selected: false,
   },
 };
+
+const rewards = document.querySelectorAll(".reward");
+
+// ### FUNCTIONS ###
 
 function changeBorderColor(element, color) {
   element.style.borderColor = color;
@@ -96,6 +98,21 @@ function incrementTotalBackers() {
   totalBackers.textContent = result.join("");
 }
 
+function openSelectedModal() {
+  selectedModal.showModal();
+}
+
+function selectPledge(pledge) {
+  const radioInput = pledge.element.querySelector("input");
+  radioInput.checked = true;
+  const inputEvent = new Event("input", { bubbles: true });
+  radioInput.dispatchEvent(inputEvent);
+}
+
+// ### EVENT LISTENERS ###
+
+backProjectBtn.addEventListener("click", openSelectedModal);
+
 for (const key in modalObj) {
   if (Object.prototype.hasOwnProperty.call(modalObj, key)) {
     const modalReward = modalObj[key];
@@ -110,8 +127,6 @@ for (const key in modalObj) {
     });
   }
 }
-
-const rewards = document.querySelectorAll(".reward");
 
 rewards.forEach((reward) => {
   const rewardType = reward.dataset.name;
@@ -136,17 +151,6 @@ rewards.forEach((reward) => {
     }
   });
 });
-
-function openSelectedModal() {
-  selectedModal.showModal();
-}
-
-function selectPledge(pledge) {
-  const radioInput = pledge.element.querySelector("input");
-  radioInput.checked = true;
-  const inputEvent = new Event("input", { bubbles: true });
-  radioInput.dispatchEvent(inputEvent);
-}
 
 completedModalBtn.addEventListener("click", () => {
   completedModal.close();
