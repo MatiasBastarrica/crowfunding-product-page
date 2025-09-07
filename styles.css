@@ -572,3 +572,32 @@ main {
   border-radius: 200px;
   padding: 1rem 2rem;
 }
+
+/* ### MEDIA QUERIES ### */
+
+@media (min-width: 46em) {
+  /* ### HEADER ### */
+  header {
+    background-image: url(./images/image-hero-desktop.jpg);
+    min-height: 400px;
+  }
+
+  .header-container.container {
+    width: 80%;
+  }
+
+  .nav-icon {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: block;
+    color: #fff;
+    font-weight: var(--fw-500);
+  }
+
+  .desktop-nav ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+}
