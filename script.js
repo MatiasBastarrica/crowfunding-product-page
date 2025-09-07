@@ -37,6 +37,7 @@ const rewards = document.querySelectorAll(".reward");
 const mobileNavIcon = document.querySelector(".nav-icon");
 const mobileMenu = document.querySelector(".mobile-menu");
 const closeMobileMenuIcon = document.querySelector(".close-icon-container");
+const closeModalIcon = document.querySelector(".modal-close-icon");
 
 // ### FUNCTIONS ###
 
@@ -168,4 +169,8 @@ mobileNavIcon.addEventListener("click", () => {
 closeMobileMenuIcon.addEventListener("click", () => {
   mobileMenu.close();
   mobileNavIcon.classList.toggle("hide");
+});
+
+closeModalIcon.addEventListener("click", () => {
+  selectedModal.close();
 });
