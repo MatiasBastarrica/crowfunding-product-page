@@ -124,8 +124,51 @@ header {
   align-items: center;
 }
 
+header .nav-icon,
+header .close-icon-container {
+  cursor: pointer;
+}
+
 .mobile-menu {
-  display: none;
+  position: absolute;
+  max-height: none;
+  width: 85%;
+  margin-inline: auto;
+  border: none;
+  z-index: 5;
+  background-color: unset;
+  top: 1.6rem;
+}
+
+.mobile-menu__header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobile-menu nav {
+  margin-top: 2rem;
+  background-color: #fff;
+  border-radius: 0.8rem;
+  color: var(--black);
+  font-weight: var(--fw-500);
+  font-size: 1.2rem;
+}
+
+.mobile-menu::backdrop {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.587),
+    rgba(0, 0, 0, 0.124)
+  );
+}
+
+.mobile-menu li {
+  padding: 1.5rem;
+}
+
+.mobile-menu li + li {
+  border-top: 1px solid #ececec;
 }
 
 .desktop-nav {

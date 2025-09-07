@@ -34,6 +34,10 @@ const modalObj = {
 
 const rewards = document.querySelectorAll(".reward");
 
+const mobileNavIcon = document.querySelector(".nav-icon");
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeMobileMenuIcon = document.querySelector(".close-icon-container");
+
 // ### FUNCTIONS ###
 
 function changeBorderColor(element, color) {
@@ -154,4 +158,14 @@ rewards.forEach((reward) => {
 
 completedModalBtn.addEventListener("click", () => {
   completedModal.close();
+});
+
+mobileNavIcon.addEventListener("click", () => {
+  mobileMenu.showModal();
+  mobileNavIcon.classList.toggle("hide");
+});
+
+closeMobileMenuIcon.addEventListener("click", () => {
+  mobileMenu.close();
+  mobileNavIcon.classList.toggle("hide");
 });
