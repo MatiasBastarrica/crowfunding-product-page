@@ -60,6 +60,28 @@ function resetPreviouslySelectedReward() {
   }
 }
 
+function updateProgressBar() {
+  if (currentBudget.textContent.replace(",", ".") >= 100) {
+    progressBar.style.width = "100%";
+  } else {
+    progressBar.style.width = `${currentBudget.textContent[0]}${currentBudget.textContent[1]}%`;
+  }
+}
+
+function updateMoneyRaised(dropdownInput) {
+  currentBudget.textContent =
+    Number(currentBudget.textContent.replace(",", ".")) +
+    Number(dropdownInput.value);
+}
+
+function incrementTotalBackers() {
+  result = String(Number(totalBackers.textContent.replace(",", "")) + 1).split(
+    ""
+  );
+  result.splice(1, 0, ",");
+  totalBackers.textContent = result.join("");
+}
+
 for (const key in modalObj) {
   if (Object.prototype.hasOwnProperty.call(modalObj, key)) {
     const modalReward = modalObj[key];
@@ -83,26 +105,4 @@ for (const key in modalObj) {
       modalReward.selected = true;
     });
   }
-}
-
-function updateProgressBar() {
-  if (currentBudget.textContent.replace(",", ".") >= 100) {
-    progressBar.style.width = "100%";
-  } else {
-    progressBar.style.width = `${currentBudget.textContent[0]}${currentBudget.textContent[1]}%`;
-  }
-}
-
-function updateMoneyRaised(dropdownInput) {
-  currentBudget.textContent =
-    Number(currentBudget.textContent.replace(",", ".")) +
-    Number(dropdownInput.value);
-}
-
-function incrementTotalBackers() {
-  result = String(Number(totalBackers.textContent.replace(",", "")) + 1).split(
-    ""
-  );
-  result.splice(1, 0, ",");
-  totalBackers.textContent = result.join("");
 }
