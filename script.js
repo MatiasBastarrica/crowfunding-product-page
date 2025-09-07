@@ -1,23 +1,13 @@
 const selectedModal = document.querySelector(".selection-modal");
 const backProjectBtn = document.querySelector(".back-project-btn");
-const modalRewards = document.querySelectorAll(".modal-reward");
+const completedModal = document.querySelector(".completed-modal");
+const currentBudget = document.querySelector(".current-budget");
+const totalBackers = document.querySelector(".total-backers");
+const progressBar = document.querySelector(".progress-bar__bar");
 
 backProjectBtn.addEventListener("click", () => {
   selectedModal.showModal();
 });
-
-// modalRewards.forEach((modalReward) => {
-//   const pledgeDropdown = modalReward.querySelector(".pledge-dropdown");
-//   const radioInput = modalReward.querySelector("input");
-//   radioInput.addEventListener("input", () => {
-//     if (radioInput.checked) {
-//       modalReward.style.borderColor = "var(--green-400)";
-//       if (pledgeDropdown) {
-//         pledgeDropdown.classList.remove("hide");
-//       }
-//     }
-//   });
-// });
 
 const noRewardPledge = document.querySelector(".no-reward-pledge");
 const bambooStandPledge = document.querySelector(".bamboo-stand-pledge");
@@ -45,6 +35,14 @@ const modalObj = {
   },
 };
 
+function changeBorderColor(element, color) {
+  element.style.borderColor = color;
+}
+
+function togglePledgeDropdown(element) {
+  element.classList.toggle("hide");
+}
+
 function resetPreviouslySelectedReward() {
   for (const key in modalObj) {
     if (Object.prototype.hasOwnProperty.call(modalObj, key)) {
@@ -52,11 +50,12 @@ function resetPreviouslySelectedReward() {
       const pledgeDropdown =
         modalReward.element.querySelector(".pledge-dropdown");
       if (modalReward.selected) {
-        modalReward.element.style.borderColor = "#dbdbdb";
+        changeBorderColor(modalReward.element, "#dbdbdb");
       }
       if (pledgeDropdown && !pledgeDropdown.classList.contains("hide")) {
-        pledgeDropdown.classList.add("hide");
+        togglePledgeDropdown(pledgeDropdown);
       }
+      modalReward.selected = false;
     }
   }
 }
@@ -69,11 +68,41 @@ for (const key in modalObj) {
       modalReward.element.querySelector(".pledge-dropdown");
     radioInput.addEventListener("input", () => {
       resetPreviouslySelectedReward();
-      modalReward.element.style.borderColor = "var(--green-400)";
+      changeBorderColor(modalReward.element, "var(--green-400");
       if (pledgeDropdown) {
-        pledgeDropdown.classList.remove("hide");
+        togglePledgeDropdown(pledgeDropdown);
+        const continueBtn = pledgeDropdown.querySelector("button");
+        const dropdownInput = pledgeDropdown.querySelector("input");
+        continueBtn.addEventListener("click", () => {
+          selectedModal.close();
+          updateMoneyRaised(dropdownInput);
+          incrementTotalBackers();
+          updateProgressBar();
+        });
       }
       modalReward.selected = true;
     });
   }
+}
+
+function updateProgressBar() {
+  if (currentBudget.textContent.replace(",", ".") >= 100) {
+    progressBar.style.width = "100%";
+  } else {
+    progressBar.style.width = `${currentBudget.textContent[0]}${currentBudget.textContent[1]}%`;
+  }
+}
+
+function updateMoneyRaised(dropdownInput) {
+  currentBudget.textContent =
+    Number(currentBudget.textContent.replace(",", ".")) +
+    Number(dropdownInput.value);
+}
+
+function incrementTotalBackers() {
+  result = String(Number(totalBackers.textContent.replace(",", "")) + 1).split(
+    ""
+  );
+  result.splice(1, 0, ",");
+  totalBackers.textContent = result.join("");
 }
