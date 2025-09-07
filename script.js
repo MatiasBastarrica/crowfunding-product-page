@@ -43,6 +43,20 @@ function togglePledgeDropdown(element) {
   element.classList.toggle("hide");
 }
 
+function handlePledgeDropdown(pledgeDropdown) {
+  if (pledgeDropdown) {
+    togglePledgeDropdown(pledgeDropdown);
+    const continueBtn = pledgeDropdown.querySelector("button");
+    const dropdownInput = pledgeDropdown.querySelector("input");
+    continueBtn.addEventListener("click", () => {
+      selectedModal.close();
+      updateMoneyRaised(dropdownInput);
+      incrementTotalBackers();
+      updateProgressBar();
+    });
+  }
+}
+
 function resetPreviouslySelectedReward() {
   for (const key in modalObj) {
     if (Object.prototype.hasOwnProperty.call(modalObj, key)) {
@@ -91,17 +105,7 @@ for (const key in modalObj) {
     radioInput.addEventListener("input", () => {
       resetPreviouslySelectedReward();
       changeBorderColor(modalReward.element, "var(--green-400");
-      if (pledgeDropdown) {
-        togglePledgeDropdown(pledgeDropdown);
-        const continueBtn = pledgeDropdown.querySelector("button");
-        const dropdownInput = pledgeDropdown.querySelector("input");
-        continueBtn.addEventListener("click", () => {
-          selectedModal.close();
-          updateMoneyRaised(dropdownInput);
-          incrementTotalBackers();
-          updateProgressBar();
-        });
-      }
+      handlePledgeDropdown(pledgeDropdown);
       modalReward.selected = true;
     });
   }
