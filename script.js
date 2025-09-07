@@ -5,9 +5,7 @@ const currentBudget = document.querySelector(".current-budget");
 const totalBackers = document.querySelector(".total-backers");
 const progressBar = document.querySelector(".progress-bar__bar");
 
-backProjectBtn.addEventListener("click", () => {
-  selectedModal.showModal();
-});
+backProjectBtn.addEventListener("click", openSelectedModal);
 
 const noRewardPledge = document.querySelector(".no-reward-pledge");
 const bambooStandPledge = document.querySelector(".bamboo-stand-pledge");
