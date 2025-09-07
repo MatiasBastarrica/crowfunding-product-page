@@ -110,3 +110,40 @@ for (const key in modalObj) {
     });
   }
 }
+
+const rewards = document.querySelectorAll(".reward");
+
+rewards.forEach((reward) => {
+  const rewardType = reward.dataset.name;
+  const rewardBtn = reward.querySelector("button");
+  rewardBtn.addEventListener("click", () => {
+    switch (rewardType) {
+      case "bamboo":
+        openSelectedModal();
+        selectPledge(modalObj.bambooStand);
+        break;
+      case "black":
+        openSelectedModal();
+        selectPledge(modalObj.blackEdStand);
+        break;
+      case "mahogany":
+        openSelectedModal();
+        selectPledge(modalObj.mahoganySpecialEd);
+        break;
+
+      default:
+        break;
+    }
+  });
+});
+
+function openSelectedModal() {
+  selectedModal.showModal();
+}
+
+function selectPledge(pledge) {
+  const radioInput = pledge.element.querySelector("input");
+  radioInput.checked = true;
+  const inputEvent = new Event("input", { bubbles: true });
+  radioInput.dispatchEvent(inputEvent);
+}
