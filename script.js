@@ -1,6 +1,7 @@
 const selectedModal = document.querySelector(".selection-modal");
 const backProjectBtn = document.querySelector(".back-project-btn");
 const completedModal = document.querySelector(".completed-modal");
+const completedModalBtn = document.querySelector(".completed-modal button");
 const currentBudget = document.querySelector(".current-budget");
 const totalBackers = document.querySelector(".total-backers");
 const progressBar = document.querySelector(".progress-bar__bar");
@@ -48,6 +49,7 @@ function handlePledgeDropdown(pledgeDropdown) {
     const dropdownInput = pledgeDropdown.querySelector("input");
     continueBtn.addEventListener("click", () => {
       selectedModal.close();
+      completedModal.showModal();
       updateMoneyRaised(dropdownInput);
       incrementTotalBackers();
       updateProgressBar();
@@ -145,3 +147,7 @@ function selectPledge(pledge) {
   const inputEvent = new Event("input", { bubbles: true });
   radioInput.dispatchEvent(inputEvent);
 }
+
+completedModalBtn.addEventListener("click", () => {
+  completedModal.close();
+});

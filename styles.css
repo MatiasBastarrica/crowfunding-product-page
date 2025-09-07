@@ -488,6 +488,12 @@ main {
   margin-inline: auto;
   border-radius: 0.8rem;
   border: unset;
+  position: absolute;
+  max-height: none;
+}
+
+.completed-modal::backdrop {
+  background-color: #00000052;
 }
 
 .completed-modal > .wrapper {
