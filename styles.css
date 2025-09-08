@@ -224,6 +224,10 @@ main {
   gap: 0.5rem;
 }
 
+.desktop-bookmark-text {
+  display: none;
+}
+
 .back-project-btn {
   color: #fff;
   background-color: var(--green-400);
@@ -320,18 +324,25 @@ main {
   position: relative;
 }
 
+.reward__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
 .reward__header > * {
   font-size: 0.9rem;
 }
 
 .reward-subtitle {
-  margin-top: 0.4rem;
   font-weight: var(--fw-500);
   color: var(--green-400);
 }
 
 .reward__footer {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
   gap: 1.2rem;
 }
 
@@ -352,7 +363,6 @@ main {
   background-color: var(--green-400);
   color: #fff;
   padding: 1rem 2.2rem;
-  justify-self: start;
   border-radius: 200px;
   font-weight: var(--fw-500);
 }
@@ -599,5 +609,79 @@ main {
   .desktop-nav ul {
     display: flex;
     gap: 1.5rem;
+  }
+
+  /* ### MAIN ### */
+
+  .crowfunding-section.container {
+    max-width: 700px;
+    top: -94px;
+  }
+
+  .crowfunding__intro {
+    padding-inline: 3rem;
+  }
+
+  .intro-btns-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .back-project-btn {
+    justify-self: start;
+  }
+
+  .bookmark-container {
+    justify-self: end;
+    background-color: #f4f4f4;
+    border-radius: 200px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .desktop-bookmark-text {
+    display: block;
+    font-weight: var(--fw-700);
+    padding-inline-end: 1.1rem;
+  }
+
+  .crowfunding__stats ul {
+    grid-template-columns: repeat(3, 160px);
+    padding: 1.5rem;
+  }
+
+  .crowfunding__stats li + li {
+    padding-top: unset;
+    padding-inline-start: 1.3rem;
+  }
+
+  .crowfunding__stats li:nth-child(2):before,
+  .crowfunding__stats li:nth-child(3):before {
+    left: 0;
+    width: 1px;
+    height: 65px;
+    border-top: unset;
+    border-left: 1px solid #d8d8d8;
+  }
+
+  .progress-bar-container {
+    margin-top: 1rem;
+    margin-inline: 1.5rem;
+  }
+
+  .about__intro {
+    gap: 1.8rem;
+  }
+
+  .reward__header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .reward__footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
