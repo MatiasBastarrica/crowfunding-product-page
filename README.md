@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [My Solution](https://your-solution-url.com)
+- Solution URL: [My Solution](https://www.frontendmentor.io/solutions/crowfunding-product-page-mb-AelvtD6Iyy)
 - Live Site URL: [Live](https://matiasbastarrica.github.io/crowfunding-product-page/)
 
 ## My process
