@@ -38,6 +38,7 @@ const mobileNavIcon = document.querySelector(".nav-icon");
 const mobileMenu = document.querySelector(".mobile-menu");
 const closeMobileMenuIcon = document.querySelector(".close-icon-container");
 const closeModalIcon = document.querySelector(".modal-close-icon");
+const bookmarkContainer = document.querySelector(".bookmark-container");
 
 // ### FUNCTIONS ###
 
@@ -177,4 +178,16 @@ closeMobileMenuIcon.addEventListener("click", () => {
 closeModalIcon.addEventListener("click", () => {
   selectedModal.close();
   resetPreviouslySelectedReward();
+});
+
+bookmarkContainer.addEventListener("click", () => {
+  const bookmarkText = bookmarkContainer.querySelector(
+    ".desktop-bookmark-text"
+  );
+  bookmarkContainer.classList.toggle("bookmarked");
+  if (bookmarkText.textContent === "Bookmark") {
+    bookmarkText.textContent = "Bookmarked";
+  } else {
+    bookmarkText.textContent = "Bookmark";
+  }
 });
