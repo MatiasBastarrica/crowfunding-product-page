@@ -60,6 +60,7 @@ function handlePledgeDropdown(pledgeDropdown) {
       updateMoneyRaised(dropdownInput);
       incrementTotalBackers();
       updateProgressBar();
+      resetPreviouslySelectedReward();
     });
   }
 }
@@ -70,8 +71,10 @@ function resetPreviouslySelectedReward() {
       const modalReward = modalObj[key];
       const pledgeDropdown =
         modalReward.element.querySelector(".pledge-dropdown");
+      const radioInput = modalReward.element.querySelector("input");
       if (modalReward.selected) {
         changeBorderColor(modalReward.element, "#dbdbdb");
+        radioInput.checked = false;
       }
       if (pledgeDropdown && !pledgeDropdown.classList.contains("hide")) {
         togglePledgeDropdown(pledgeDropdown);
@@ -173,4 +176,5 @@ closeMobileMenuIcon.addEventListener("click", () => {
 
 closeModalIcon.addEventListener("click", () => {
   selectedModal.close();
+  resetPreviouslySelectedReward();
 });

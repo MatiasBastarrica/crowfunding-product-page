@@ -547,6 +547,7 @@ main {
 .completed-modal {
   top: 9rem;
   width: 90%;
+  max-width: 445px;
   margin-inline: auto;
   border-radius: 0.8rem;
   border: unset;
@@ -723,4 +724,14 @@ main {
   /* .pledge-dropdown__cta {
     justify-self: end;
   } */
+
+  /* ### COMPLETED MODAL ### */
+
+  .completed-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-inline: unset;
+  }
 }
