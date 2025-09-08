@@ -48,7 +48,7 @@ Users should be able to:
 
 ### What I learned
 
-I learned how to reset previously selected elements by the user when a different element is being chosen on the modal. I have also learned how to make a selection even before the modal is opened, that is keeping the selection made by the user on the main site when the modal is then displayed.
+I learned how to reset prior selections when a new element is chosen in the modal, as well as how to retain selections made on the main site so they appear when the modal is opened.
 
 ## Author
 
