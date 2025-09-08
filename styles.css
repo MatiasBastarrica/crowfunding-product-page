@@ -380,6 +380,7 @@ main {
 .selection-modal {
   top: 8rem;
   width: 90%;
+  max-width: 700px;
   margin-inline: auto;
   border-radius: 0.8rem;
   border: unset;
@@ -684,4 +685,42 @@ main {
     justify-content: space-between;
     align-items: center;
   }
+
+  /* ### SELECTION MODAL ### */
+
+  .selection-modal > .wrapper {
+    padding-inline: 2.5rem;
+  }
+
+  .modal-close-icon {
+    right: -15px;
+  }
+
+  .modal-reward {
+    position: relative;
+  }
+
+  .title-container {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+  }
+
+  .days-left-container {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.3rem;
+  }
+
+  .pledge-dropdown > .wrapper {
+    grid-template-columns: 55% 1fr;
+    align-items: center;
+  }
+
+  .pledge-dropdown h3 {
+    justify-self: start;
+  }
+  /* .pledge-dropdown__cta {
+    justify-self: end;
+  } */
 }
