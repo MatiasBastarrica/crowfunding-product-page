@@ -423,6 +423,10 @@ main {
   gap: 1.2rem;
 }
 
+.modal-reward.disabled {
+  filter: opacity(50%);
+}
+
 .modal-reward__header {
   display: grid;
   grid-template-columns: auto 1fr;

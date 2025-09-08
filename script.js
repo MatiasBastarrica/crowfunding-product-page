@@ -152,7 +152,7 @@ rewards.forEach((reward) => {
         break;
       case "mahogany":
         openSelectedModal();
-        selectPledge(modalObj.mahoganySpecialEd);
+        // selectPledge(modalObj.mahoganySpecialEd);
         break;
 
       default:
