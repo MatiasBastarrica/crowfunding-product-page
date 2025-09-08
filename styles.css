@@ -528,6 +528,16 @@ main {
   margin-top: 1rem;
 }
 
+.pledge-dropdown__cta.button-only {
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.pledge-dropdown__cta.button-only button {
+  width: 118px;
+  height: 53px;
+}
+
 .pledge-dropdown__cta .input-container {
   position: relative;
 }
@@ -761,9 +771,10 @@ main {
   .pledge-dropdown h3 {
     justify-self: start;
   }
-  /* .pledge-dropdown__cta {
-    justify-self: end;
-  } */
+
+  .pledge-dropdown__cta.button-only {
+    justify-items: end;
+  }
 
   /* ### COMPLETED MODAL ### */
 

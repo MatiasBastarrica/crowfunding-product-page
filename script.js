@@ -58,9 +58,12 @@ function handlePledgeDropdown(pledgeDropdown) {
     continueBtn.addEventListener("click", () => {
       selectedModal.close();
       completedModal.showModal();
-      updateMoneyRaised(dropdownInput);
+      if (dropdownInput) {
+        updateMoneyRaised(dropdownInput);
+        updateProgressBar();
+      }
+
       incrementTotalBackers();
-      updateProgressBar();
       resetPreviouslySelectedReward();
     });
   }
